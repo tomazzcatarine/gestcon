@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'animate.css';
+
+:root{
+    --cor-1: #fff5ed;
+    --cor-2: #234266;
+    --cor-3: #afc5d5;
+    --cor-4: #2f4156;
+
+    --font-title: 'Young Serif', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--cor-1);
+    margin-left: 80px;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+nav {
+    padding: 30px 11px;
+    display: flex;
+    justify-content: center;   /*   alinhar no centro os itens */
+    gap: 50px; /* Controle de espaçamento entre links */
+}
+ 
+nav a {
+    color: var(--cor-2);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+ 
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -3px; /* Ajuste para alinhar a linha */
+    transform: translateX(-50%);
+    width: 0; /* Começa com a linha invisível */
+    height: 3px;
+    border-radius: 25px;
+    background-color: var(--cor-2);
+    transition: width 0.3s ease;
+}
+ 
+nav a:hover::after {
+    width: 80%; /* Linha se expande no hover */
+}
+ 
+nav a.active::after {
+    width: 80%; /* Linha ativa */
+}
+ 
+nav a.active {
+    color: var(--cor-2); /* Pode ajustar a cor ou destaque */
+    font-weight: bold;
+}
+
+.olho{
+    position: absolute;
+    top: 100px;   
+    left: 550px;
+    width: 55px;
+    height: auto;
+}
+
+.logo{
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+h1 {
+    font-family: var(--font-title);
+    font-size: 25px;
+    color: var(--cor-2);
+    text-align: center;
+    margin-top: 30px;
+}
+    
+h2 {
+    font-family: var(--font-title);
+    font-size: 20px;
+    color: var(--cor-2);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container{
+    width: 300px;
+    height: 450px;
+    text-align: center;
+    border-radius: 50px;
+    margin-left: 350px;
+    margin-top: 30px;
+}
+
+.container h2 {
+    color: var(--cor-1);
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px
+}
+
+h3{
+    font-family: var(--font-title);
+    color: var(--cor-1);
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.icon {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; 
+    margin-top: 50px;
+}
+
+.conteudo{
+    background-color: var(--cor-2); 
+    color: var(--cor-1); 
+    font-size: 20PX;
+    border-radius: 15px; 
+    display: grid;
+    grid-template-columns: 1fr;          /* --> form foi divido em 2 colunas*/
+    padding: 20px; 
+    width: 750px;
+    height: 350px;
+    margin-left: 320px;
+    margin-top: -450px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-align: left;
+} 
+
+input {
+    font-family: var(--font-body);
+    font-weight: 600;
+    border: none;
+    width: 300px;
+    background-color: var(--cor-3);
+    margin-left: 350px;
+    margin-bottom: 5px; /* Diminua o valor aqui */
+    color: var(--cor-2);
+    padding: 12px 15px;
+    border-radius: 10px;
+}   
+
+label {
+    margin-left: 350px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--cor-1);
+    font-size: 17px;
+    margin-bottom: 5px; /* Espaço entre o label e o input */
+}
+
+.form-group-1{
+    margin-top: 70px;
+}
+
+.form-group-2{
+    margin-top: -70px;
+}
+
+.form-group-3{
+    margin-top: -70px;
+}
+
+.voltar img{
+    width: 40px;
+    height: auto;
+    position: relative;
+    left: -15px;
+    bottom: -10px;
+    opacity: 1; /* Transparência padrão */ 
+    transition: opacity 0.3s ease;
+}
+
+.voltar {
+    font-size: 20px;
+    color: var(--cor-4);
+    text-decoration: none;
+    position: relative;
+    bottom: -15px;
+    left: 560px;
+    transition: color 0.5s;
+    font-family: var(--font-title);
+    transition: 0.5;
+    
+}
+
+.voltar::after {
+    opacity: 0.5;
+    content: ""; /* Cria um pseudo-elemento vazio */
+    position: absolute;
+    left: 170px;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-2);
+    transition: width 0.3s ease-in-out;
+  }
+
+.voltar:hover::after {
+    width: 30%;
+  }
+
+
+.editar img{
+    width: 40px;
+    height: auto;
+    position: relative;
+    bottom: 75px;
+    left:  1050px;
+    opacity: 1; /* Transparência padrão */ 
+    transition: opacity 0.3s ease;
+}
+
+.editar img:hover{
+    opacity: 0.5;
+}

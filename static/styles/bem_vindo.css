@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'animate.css';
+
+:root{
+    --cor-1: #fff5ed;
+    --cor-2: #234266;
+    --cor-3: #afc5d5;
+    --cor-4: #2f4156;
+
+    --font-title: 'Young Serif', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+    
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+
+    background-color: var(--cor-1);
+    margin-left: 80px;
+}
+
+h1{
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 55px;
+    margin-right: 30px;
+    color: var(--cor-2);
+}
+
+h2{
+    font-family: var(--font-title);
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 30px;
+    color: var(--cor-2);
+}
+
+/* card - cadastro cliente! */
+
+.card_cadastro_cliente {
+    margin-left: 50px;
+    margin-top: 70px;
+    width: 400px;       /* largura quadrado */
+    height: 150px;      /* altura quadrado */
+    background-color: var(--cor-2); 
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card_cadastro_cliente a{
+    padding-bottom: 30px;
+    font-family: var(--font-title);
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-align: right;
+}
+
+.card_cadastro_cliente h3 {
+    margin-top: 60px; 
+}
+
+.card_cadastro_cliente:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.card_cadastro_cliente img {
+    position: relative;
+    bottom: 155px; 
+}
+
+
+/* card - consulta cliente! */
+
+.card_consulta_cliente {
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 400px;       /* largura quadrado */
+    height: 150px;      /* altura quadrado */
+    background-color: #b78729; 
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card_consulta_cliente a{
+    padding-bottom: 30px;
+    font-family: var(--font-title);
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-align: left;
+}
+
+.card_consulta_cliente:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.card_consulta_cliente img {
+    position: relative;
+    bottom: 20px; 
+    left: 315px;
+}
+
+/* card - cadastro fornecedor! */
+
+.card_cadastro_fornecedor {
+    margin-left: 530px;
+    margin-top: -411px;
+    width: 480px;       /* largura quadrado */
+    height: 60px;      /* altura quadrado */
+    background-color: #67905e; 
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card_cadastro_fornecedor a{
+    padding-bottom: 30px;
+    font-family: var(--font-title);
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-align: left;
+}
+
+.card_cadastro_fornecedor h3 {
+    padding-left: 100px;
+}
+
+.card_cadastro_fornecedor p{
+    padding-left: 100px;
+}
+
+.card_cadastro_fornecedor:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.card_cadastro_fornecedor img {
+    position: relative;
+    bottom: 75px; 
+}
+
+/* card - consulta fornecedor! */
+
+.card_consulta_fornecedor {
+    margin-left: 530px;
+    margin-top: 30px;
+    width: 220px;       /* largura quadrado */
+    height: 240px;      /* altura quadrado */
+    background-color: #ff9f6c; 
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card_consulta_fornecedor a{
+    font-family: var(--font-title);
+    font-size: 20px;
+    text-decoration: none;
+    color: #c95c3f;
+    text-align: left;
+}
+
+.card_consulta_fornecedor h3 {
+    margin-top: 5px;
+}
+
+.card_consulta_fornecedor:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.card_consulta_fornecedor img {
+    position: relative;
+    top: 0px;
+    left: 140px; 
+}
+
+/* card - cadastro usuario! */
+
+.card_cadastro_usuario {
+    margin-left: 820px;
+    margin-top: -280px;
+    width: 190px;       /* largura quadrado */
+    height: 240px;      /* altura quadrado */
+    background-color: #afc5d5; 
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card_cadastro_usuario a{
+    font-family: var(--font-title);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--cor-2);
+    text-align: right;
+    margin-right: 10px;
+}
+.card_cadastro_usuario h3 {
+    margin-top: 5px;
+}
+
+.card_cadastro_usuario:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.card_cadastro_usuario img {
+    position: relative;
+    top: 30px;
+    right: 13px; 
+}
+
+
+/* card - consulta usuário! */
+
+.card_consulta_usuario {
+    margin-left: 1080px;
+    margin-top: -405px;
+    width: 190px;       /* largura quadrado */
+    height: 370px;      /* altura quadrado */
+    background-color: #be2424; 
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card_consulta_usuario a{
+    font-family: var(--font-title);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--cor-1);
+    text-align: left;
+    width: 36px;
+    margin-right: 10px;
+}
+.card_consulta_usuario h3 {
+    margin-top: 5px;
+}
+
+.card_consulta_usuario:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.card_consulta_usuario img {
+    position: relative;
+    left: 0px;
+}

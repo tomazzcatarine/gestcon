@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'animate.css';
+
+:root{
+    --cor-1: #fff5ed;
+    --cor-2: #234266;
+    --cor-3: #afc5d5;
+    --cor-4: #2f4156;
+
+    --font-title: 'Young Serif', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+    
+}
+
+body{
+    background-image: url("/static/assets/background.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    color: #fff5ed;
+    font-family: var(--font-title);
+    font-size: 60px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+h2 {
+    color: var(--cor-1);
+    font-family: var(--font-title);
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+h3 {
+    color: var(--cor-2);
+    font-family: var(--font-title);
+    font-size: 30px;
+    margin-left: 565px;
+    margin-top: -200px;
+    text-align: center;
+    animation: animation_JackInTheBox 1s ease-out;
+}
+
+a{
+    font-family: var(--font-body);
+    color: var(--cor-2);
+    text-decoration: none;
+    margin-left: 70px;
+    transform: 0.5s;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+@keyframes animation_jackInTheBox {
+    0% {
+        opacity: 0;
+        transform: scale(0.1) translateY(-200px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1) translateY(30px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Aplicando a animação à classe */
+.jackInTheBox {
+    animation: animation_jackInTheBox 0.5s ease-out;
+}
+
+.login{
+    position: absolute;
+    right: 220px; /* Distância do lado direito da tela */
+    top: 180px;
+    align-items: center;
+    padding: 50px;
+    width: 400px;
+    background-color: var(--cor-1);
+    border: 1px solid var(--cor-4);
+    border-radius: 20px;
+}
+
+.login h1{
+    color: var(--cor-2);
+    font-family: var(--font-body);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login input {
+    font-family: var(--font-body);
+    color: var(--cor-2);
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--cor-3);
+    margin-right: 15px;
+}
+
+.mensagem-error {
+    color: #fff;
+    background-color: #e74c3c;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px auto;
+    width: fit-content;
+}
+
+.mensagem-success {
+    color: #fff;
+    background-color: #2ecc71;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px auto;
+    width: fit-content;
+}
+
+button{
+    padding: 10px 50px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--cor-2);
+    margin-top: 20px;
+    margin-left: 120px;
+    border: 1px solid var(--cor-2);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: var(--cor-2);
+    color: var(--cor-1)
+}
+
+img{
+    width: 400px;
+    height: auto;
+    margin-left: 120px;
+    margin-top: 180px;
+}
+
+/* Definindo a animação */
+@keyframes animation_zoomInDown {
+    0% {
+        opacity: 0;
+        transform: scale(0.1) translateY(-100px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.0) translateY(8px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Aplicando a animação na class */
+.zoomInDown {
+    animation: animation_zoomInDown 1s ease-out;
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestcon</title>
+    <link rel="stylesheet" href="/static/styles/editar_cliente.css">
+    <link rel="icon" type="image/x-icon" href="/static/assets/favicon.png">
+</head>
+<body>
+    <nav>
+        <a href="/cadastro_cliente">Cadastro Clientes</a>
+        <a href="/consulta_cliente">Consulta Clientes</a>
+        <a href="/cadastro_fornecedor">Cadastro Fornecedores</a>
+        <a href="/consulta_fornecedor">Consulta Fornecedores</a>
+        <a href="/cadastro_usuario">Cadastro Usuários</a>
+        <a href="/consulta_usuario">Consulta Usuários</a>
+    </nav>
+
+    <img class="logo" src="/static/assets/logo.png" alt="">
+ 
+    <h2>Editar Cadastro</h2>
+    <img class="lapis" src="/static/assets/lapis.png" alt="">
+    
+    <form action="/editar_cliente/{{ cliente[0] }}" method="post" enctype="multipart/form-data">
+        <div class="container">
+            <img src="/static/assets/editar_usuario.png" alt="">
+            <input type="text" name="nome" value="{{ cliente[1] }}">
+            <h1>Cadastro: {{ cliente[9] }}</h1>
+        </div>    
+    
+        <div class="conteudo">
+            <div class="form_1">
+                <div class="campo-form">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" value="{{ cliente[2] }}">
+                </div>
+
+                <div class="campo-form">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" name="telefone" value="{{ cliente[3] }}">
+                </div>
+
+                <div class="campo-form">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" value="{{ cliente[10] }}">
+                </div>
+
+                <div class="campo-form">
+                    <label for="rua">Rua:</label>
+                    <input type="text" name="rua" value="{{ cliente[4] }}">
+                </div>
+            </div>
+
+            <div class="form_2">
+                <div class="campo-form">
+                    <label for="numero">Número:</label>
+                    <input type="text" name="numero" value="{{ cliente[5] }}">
+                </div>
+
+                <div class="campo-form">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" name="cidade" value="{{ cliente[6] }}">
+                </div>
+
+                <div class="campo-form">
+                    <label for="estado">Estado:</label>
+                    <input type="text" name="estado" value="{{ cliente[7] }}">
+                </div>
+
+                <div class="campo-form">
+                    <label for="cep">CEP:</label>
+                    <input type="text" name="cep" value="{{ cliente[8] }}">
+                </div>
+            </div>
+        </div>
+
+        <button type="submit">Salvar Alterações</button>
+    
+    </form>
+
+</body>
+</html>

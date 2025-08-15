@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestcon</title>
+    <link rel="stylesheet" href="/static/styles/cadastro_cliente.css">
+    <link rel="icon" type="image/x-icon" href="/static/assets/favicon.png">
+</head>
+
+    <header>
+        <nav>
+            <a class="active" href="/cadastro_cliente">Cadastro Clientes</a>
+            <a href="/consulta_cliente">Consulta Clientes</a>
+            <a href="/cadastro_fornecedor">Cadastro Fornecedores</a>
+            <a href="/consulta_fornecedor">Consulta Fornecedores</a>
+            <a href="/cadastro_usuario">Cadastro Usuários</a>
+            <a href="/consulta_usuario">Consulta Usuários</a>
+        </nav>
+    </header>
+
+    <img class="logo" src="/static/assets/logo_cadastro_usuario.png" alt="">
+
+<body>
+    <div class="conteudo">
+        <h1>Bem-vindo, {{ nome_usuario }}!</h1>
+        <h2>Cadastre suas informações aqui!</h2>
+
+        <form action="/enviar_cliente" method="post">
+            <div class="cadastro_cli1">
+                <label for="nome"></label>
+                <input type="text" name="nome" placeholder="Nome" required>
+
+                <label for="email"></label>
+                <input type="text" name="email" placeholder="Email" required>
+    
+                <label for="telefone"></label>
+                <input type="text" name="telefone" placeholder="Telefone" required>
+
+                <label for="cpf"></label>
+                <input type="text" name="cpf" placeholder="CPF" required>
+            </div>
+
+            <div class="cadastro_cli2" >
+                <label for="rua"></label>
+                <input type="text" name="rua" placeholder="Rua" required>
+
+                <label for="numero"></label>
+                <input type="text" name="numero" placeholder="N°" required>
+
+                <label for="cidade"></label>
+                <input type="text" name="cidade" placeholder="Cidade" required>
+
+                <label for="estado"></label>
+                <input type="text" name="estado" placeholder="Estado" required>
+
+                <label for="cep"></label>
+                <input type="text" name="cep" placeholder="CEP" required> 
+            </div>
+
+            <div class="cadastro_cli3">
+                <label for="data"></label>
+                <input type="date" name="data_cadastro" placeholder="Data">
+
+                <div class="checkbox">
+                    <h3>AO ENVIAR VOCÊ CONCORDA COM NOSSOS <U>TERMOS, SERVIÇOS E ARMAZENAMENTO</U> DE SEUS DADOS</h3>
+                    <input type="checkbox" id="exampleCheckbox" required>
+                    <label for="exampleCheckbox">Aceito os termos e condições</label>
+                </div>
+            </div>
+
+            <div class="botao">
+                <button type="submit" >Cadastrar</button>
+            </div>
+        </form>
+    </div>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+</body>
+</html>

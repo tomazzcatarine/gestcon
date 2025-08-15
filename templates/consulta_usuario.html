@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestcon</title>
+    <link rel="stylesheet" href="/static/styles/consulta_usuario.css">
+    <link rel="icon" type="image/x-icon" href="/static/assets/favicon.png">
+</head>
+<body>
+
+    <header class="cabecalho" >
+        <nav>
+            <a href="/cadastro_cliente">Cadastro Clientes</a>
+            <a href="/consulta_cliente">Consulta Clientes</a>
+            <a href="/cadastro_fornecedor">Cadastro Fornecedores</a>
+            <a href="/consulta_fornecedor">Consulta Fornecedores</a>
+            <a href="/cadastro_usuario">Cadastro Usuários</a>
+            <a class="active" href="/consulta_usuario">Consulta Usuários</a>
+        </nav>
+    </header>
+
+    <img class="logo" src="/static/assets/logo.png" alt="">
+
+    <h2>CONSULTA DE USUÁRIOS</h2>
+    <h3>Olá, {{ nome_usuario }}!</h3>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>PERFIL</th>
+                    <th>NOME</th>
+                    <th>USUÁRIO</th>
+                    <th>SENHA</th>
+                    <th>OPÇÕES</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in login %}
+                <tr>
+                    <td>{{ usuario[0] }}</td> 
+                    <td class="foto">
+                        {% if usuario[4] %}
+                            <img src="{{ url_for('uploaded_file', filename=usuario[4]) }}" alt="{{ usuario[3] }}" width="70" >
+                        {% else %}
+                            <img src="/static/assets/editar_usuario.png" alt="Imagem não disponível" width="70">
+                        {% endif %}
+                    </td>
+
+                    <td>{{ usuario[3] }}</td>
+                    <td>{{ usuario[1] }}</td>
+                    <td>{{ usuario[2] }}</td>
+
+                    <td>
+                        <a class= "link_visualizar" href="{{ url_for('visualizar_usuario', usuario_id=usuario[0]) }}"> Visualizar </a>                        
+                        <a class="link_excluir" href="/excluir/{{ usuario[0] }}" class="link_excluir">EXCLUIR</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

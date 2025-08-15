@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestcon</title>
+    <link rel="stylesheet" href="/static/styles/editar_usuario.css">
+    <link rel="icon" type="image/x-icon" href="/static/assets/favicon.png">
+</head>
+<body>
+
+    <header class="cabecalho" >
+        <nav>
+            <a href="/cadastro_cliente">Cadastro Clientes</a>
+            <a href="/consulta_cliente">Consulta Clientes</a>
+            <a href="/cadastro_fornecedor">Cadastro Fornecedores</a>
+            <a href="/consulta_fornecedor">Consulta Fornecedores</a>
+            <a href="/cadastro_usuario">Cadastro Usuários</a>
+            <a href="/consulta_usuario">Consulta Usuários</a>
+        </nav>
+    </header>
+
+    <img class="logo" src="/static/assets/logo.png" alt="">
+
+    <img class="lapis" src="/static/assets/lapis.png" alt="">
+    <h1>Editar Cadastro de Usuário</h1>
+    <h2>Olá, {{ usuario[3]}}!</h2>
+
+    <div class="container">
+        {% if usuario[4] %}
+            <img class="icon" src="{{ url_for('uploaded_file', filename=usuario[4]) }}" alt="{{ usuario[3] }}" width="100">
+        {% else %}
+            <img class="icon" src="/static/assets/editar_usuario.png" alt="Imagem não disponível" width="100">
+        {% endif %} 
+        <h1>{{ usuario[3] }}</h1>
+    </div>
+
+    <form action="/editar_usuario/{{ usuario[0] }}" method="post" enctype="multipart/form-data">
+        <div class="conteudo">
+            <div class="form-group-1">
+                <label for="nome_usuario">Nome:</label>
+                <input type="text" name="nome_usuario" value="{{ usuario[3] }}" required>
+            </div>
+
+            <div class="form-group-2">
+                <label for="usuario">Usuário:</label>
+                <input type="text" name="usuario" value="{{ usuario[1] }}">
+            </div>
+
+            <div class="form-group-3">
+                <label for="senha">Senha:</label>
+                <input type="text" name="senha" value="{{ usuario[2] }}">
+            </div>
+        </div>
+    <a class="voltar" href="/consulta_usuario">
+        <img src="/static/assets/voltar.png" alt="">Página de Consulta
+    </a>
+
+    <button type="submit">Salvar Alterações</button>
+
+
+</body>
+</html>

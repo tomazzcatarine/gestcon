@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'animate.css';
+ 
+:root{
+    --cor-1: #fff5ed;
+    --cor-2: #234266;
+    --cor-3: #afc5d5;
+    --cor-4: #2f4156;
+ 
+    --font-title: 'Young Serif', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+ 
+*{
+    margin: 0;
+    padding: 0;
+}
+ 
+body{
+    background-color: var(--cor-1);
+}
+ 
+nav {
+    padding: 30px 11px;
+    display: flex;
+    justify-content: center;   /*   alinhar no centro os itens */
+    gap: 50px; /* Controle de espaçamento entre links */
+}
+ 
+nav a {
+    color: var(--cor-2);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+ 
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -3px; /* Ajuste para alinhar a linha */
+    transform: translateX(-50%);
+    width: 0; /* Começa com a linha invisível */
+    height: 3px;
+    border-radius: 25px;
+    background-color: var(--cor-2);
+    transition: width 0.3s ease;
+}
+ 
+nav a:hover::after {
+    width: 80%; /* Linha se expande no hover */
+}
+ 
+nav a.active::after {
+    width: 80%; /* Linha ativa */
+}
+ 
+nav a.active {
+    color: var(--cor-2); /* Pode ajustar a cor ou destaque */
+    font-weight: bold;
+}
+ 
+.logo{
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.conteudo {
+    background-color: var(--cor-2);
+    border-radius: 15px;
+    padding: 50px 50px ;        /* --> margem do input*/
+    width: 100%;                /* --> largura da caixa  */
+    max-width: 1250px;          /* --> largura máxima que ela pode ficar  */
+    max-height: 440px;          /* --> altura máxima da caixa  */
+    margin-left: 90px;
+
+}
+
+h1 {
+    font-family: var(--font-title);
+    font-size: 44px;
+    color: var(--cor-1);
+    text-align: center;
+    margin-top: -10px;
+}
+
+h2 {
+    font-family: var(--font-title);
+    font-size: 30px;
+    color: var(--cor-1);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* FORMULÁRIO */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;          /* --> form foi divido em 3 colunas*/
+    gap: 50px;           /* --> distância entre os input (muda o tamanho deles) */
+}
+
+/* INPUT */
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 16px;
+    font-family: var(--font-body);
+    border: 2px solid var(--cor-2);
+    border-radius: 15px;
+    background-color: #dae7f3;
+    color: var(--cor-2);
+    transition: 0.5s;
+}
+
+input::placeholder{
+    color: var(--cor-2);
+}
+ 
+input:hover, input:focus{
+    background-color: #afc5d5;
+    font-weight: 500;
+}
+
+/* TERMOS E CONDIÇÕES */
+.cadastro_fornecedor_3 h3, .checkbox {
+    grid-column: 1 / 3;
+    font-size: 16px;
+    color: var(--cor-4);
+    font-family: var(--font-body);
+    text-align: left;
+    background-color: #dae7f3;
+    padding: 10px 10px;
+    margin-left: 15px;
+    border-radius: 10px;
+}
+
+/* Layout das seções */
+.cadastro_fornecedor_1, .cadastro_fornecedor_2, .cadastro_fornecedor_3 {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+/* BOTÃO */
+button {
+    padding: 10px 140px;
+    font-size: 20px;
+    color: var(--cor-4);
+    font-family: var(--font-body);
+    background-color: var(--cor-1);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    left: 875px;
+    bottom: 160px
+}
+
+button:hover {
+    background-color: var(--cor-3);
+    color: var(--cor-2);
+}
+
+.alert {
+    padding: 10px;
+    margin: 15px auto;
+    border-radius: 5px;
+    width: fit-content;
+    text-align: center;
+    white-space: nowrap;
+}
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    font-family: var(--font-body);
+}
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}

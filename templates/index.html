@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestcon</title>
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+    <link rel="icon" type="image/x-icon" href="/static/assets/favicon.png">
+</head>
+<body>
+
+    <h1>Cadastro de <br>Clientes</h1>
+    <h2>Cadastre, consulte, edite e <br>exclua informações</h2>
+    <h3 class="jackInTheBox"> Bem-vindo ao nosso site <br>de cadastro de informações!</h3>
+
+    <div class="login">
+        <h1>LOGIN</h1>
+        <form action="/login" method="post">
+            <label for="usuario"></label>
+            <input type="text" name="usuario" id="usuario" placeholder="Usuário" required>
+
+            <label for="senha"></label>
+            <input type="password" name="senha" id="senha" placeholder="Senha" required>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="mensagens">
+                {% for categoria, msg in messages %}
+                    <p class="mensagem-{{ categoria }}">{{ msg }}</p>
+                {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}
+            
+            <a href="/cadastro_usuario">Sem Login? Cadastre-se aqui!</a>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <div>
+        <img src="/static/assets/smurf.png" alt="" class="zoomInDown">
+    </div>
+</body>
+</html>

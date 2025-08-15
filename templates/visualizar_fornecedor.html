@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/visualizar_fornecedores.css">
+    <title>Gestcon</title>
+</head>
+<body>
+
+    <nav>
+        <a href="/cadastro_cliente">Cadastro Clientes</a>
+        <a href="/consulta_cliente">Consulta Clientes</a>
+        <a href="/cadastro_fornecedor">Cadastro Fornecedores</a>
+        <a href="/consulta_fornecedor">Consulta Fornecedores</a>
+        <a href="/cadastro_usuario">Cadastro Usuários</a>
+        <a href="/consulta_usuario">Consulta Usuários</a>
+    </nav>
+
+    <img class="logo" src="/static/assets/logo.png" alt="">
+
+    <h2>Visualização de Perfil</h2>
+    <img class="olho" src="/static/assets/olho.png" alt="">
+
+    <div class="container">
+        <img src="/static/assets/carrinho.png" alt="">
+        <h3> {{ fornecedor[1] }} </h3>
+        <h1>Cadastro: {{ fornecedor[11] }}</h1>
+    </div>
+
+    <div class="conteudo">
+        <div class="form_1">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" value="{{ fornecedor[2] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" value="{{ fornecedor[3] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="cnpj">CNPJ</label>
+                <input type="text" id="cnpj" value="{{ fornecedor[5] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="rua">Rua</label>
+                <input type="text" id="rua" value="{{ fornecedor[6] }}" readonly>
+            </div>
+        </div>
+
+        <div class="form_2">
+            <div class="form-group">
+                <label for="numero">N°</label>
+                <input type="text" id="numero" value="{{ fornecedor[7] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" value="{{ fornecedor[8] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" value="{{ fornecedor[9] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" value="{{ fornecedor[10] }}" readonly>
+            </div>
+        </div>
+    </div>
+    
+    <a class="voltar" href="/consulta_fornecedor">
+        <img src="/static/assets/voltar.png" alt="">Página de Consulta
+    </a>
+
+    <a class="editar" href="/editar_fornecedor/{{ fornecedor[0] }}">
+        <img src="/static/assets/editar.png" alt="">
+    </a>
+
+</body>
+</html>

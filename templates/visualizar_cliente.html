@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestcon</title>
+    <link rel="stylesheet" href="/static/styles/visualizar_cliente.css">
+    <link rel="icon" type="image/x-icon" href="/static/assets/favicon.png">
+</head>
+<body>
+    <nav>
+        <a href="/cadastro_cliente">Cadastro Clientes</a>
+        <a href="/consulta_cliente">Consulta Clientes</a>
+        <a href="/cadastro_fornecedor">Cadastro Fornecedores</a>
+        <a href="/consulta_fornecedor">Consulta Fornecedores</a>
+        <a href="/cadastro_usuario">Cadastro Usuários</a>
+        <a href="/consulta_usuario">Consulta Usuários</a>
+    </nav>
+
+    <img class="logo" src="/static/assets/logo.png" alt="">
+ 
+    <h2>Visualização de Perfil</h2>
+    <img class="olho" src="/static/assets/olho.png" alt="">
+
+    <div class="container">
+        <img src="/static/assets/maos.png" alt="">
+        <h3> {{ cliente[1] }} </h3>
+        <h1>Cadastro: {{ cliente[9] }}</h1>
+    </div>    
+
+    <div class="conteudo">
+        <div class="form_1">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" value="{{ cliente[2] }}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" value="{{ cliente[3] }}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" value="{{ cliente[10] }}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="rua">Rua</label>
+                <input type="text" id="rua" value="{{ cliente[4] }}" readonly>
+            </div>
+        </div>
+        
+        <div class="form_2">
+            <div class="form-group">
+                <label for="numero">N°</label>
+                <input type="text" id="numero" value="{{ cliente[5] }}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" value="{{ cliente[6] }}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" value="{{ cliente[7] }}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" value="{{ cliente[8] }}" readonly>
+            </div>
+        </div>
+    </div>
+
+    <a class="voltar" href="/consulta_cliente">
+        <img src="/static/assets/voltar.png" alt="">Página de Consulta
+    </a>
+
+    <a class="editar" href="/editar_cliente/{{ cliente[0] }}">
+        <img src="/static/assets/lapis.png" alt="">
+    </a>
+    
+</body>
+</html>

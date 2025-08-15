@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestcon</title>
+    <link rel="stylesheet" href="/static/styles/bem_vindo.css">
+    <link rel="icon" type="image/x-icon" href="/static/assets/favicon.png">
+</head>
+<body>
+
+    <h1 class="jackInTheBox"> Boas-Vindas, {{ nome_usuario }}! </h1>
+    <h2> Escolha a ação que deseja realizar: </h2>
+    
+    <div class="card_cadastro_cliente">
+        <a href="cadastro_cliente" class="card-link">
+            <h3>Cadastrar Clientes</h3>
+            <p>Cadastre seus clientes aqui de forma organizada!</p>
+        </a>
+
+        <img src="/static/assets/cadastrar_clientes.png" alt="">
+    </div>
+
+    <div class="card_consulta_cliente">
+        <a href="consulta_cliente" class="card-link">
+            <h3>Consultar Clientes</h3>
+            <p>Consulte informações dos seus <br> clientes aqui!</p>
+        </a>
+
+        <img src="/static/assets/consultar_cliente.png" alt="">
+    </div>
+
+    <div class="card_cadastro_fornecedor">
+        <a href="cadastro_fornecedor" class="card-link">
+            <h3>Cadastrar Fornecedor </h3>
+            <p>Mantenha suas parcerias em dia!</p>
+        </a>
+
+        <img src="/static/assets/cadastro_fornecedores.png" alt="">
+    </div>
+
+    <div class="card_consulta_fornecedor">
+        <a href="consulta_fornecedor" class="card-link">
+            <h3>Consultar Fornecedores </h3>
+            <p>Encontre todos os dados dos seus fornecedores!</p>
+        </a>
+
+        <img src="/static/assets/consulta_fornecedores.png" alt="">
+    </div>
+
+    <div class="card_cadastro_usuario">
+        <a href="/cadastro_usuario" class="card-link">
+            <h3>Cadastro Usuários </h3>
+            <p>Adicione novos usuários!</p>
+        </a>
+
+        <img src="/static/assets/cadastrar_usuario.png" alt="">
+    </div>
+
+    <div class="card_consulta_usuario">
+        <img src="/static/assets/consultar_usuario.png" alt="">
+        <a href="/consulta_usuario" class="card-link">
+            <h3>Consulta Usuários </h3>
+            <p>Visualize e gerencie os usuários cadastrados!</p>
+        </a>
+    </div>
+    
+</body>
+</html>

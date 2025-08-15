@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestcon</title>
+    <link rel="stylesheet" href="/static/styles/cadastro_usuario.css">
+    <link rel="icon" type="image/x-icon" href="/static/assets/favicon.png">
+</head>
+
+<body>
+
+    <img class="logo" src="/static/assets/logo_cadastro_usuario.png" alt="">
+    <div class="conteudo">
+        <form action="/enviar_usuario" method="POST" enctype="multipart/form-data">
+            <div class="form">
+                <label for="usuario"></label>
+                <input type="text" id="usuario" name="usuario" required placeholder="Usuário:"> <br>
+                
+                <label for="senha"></label>
+                <input type="password" id="senha" name="senha" required placeholder="Senha:"> <br>
+                
+                <label for="nome_usuario"></label>
+                <input type="text" id="nome_usuario" name="nome_usuario" required placeholder="Nome:"> <br>
+            </div>
+
+            <label for="imagem"></label>
+            <input type="file" id="imagem" name="imagem" accept="image/*">
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <a class="voltar" href="/">
+        <img class="seta" src="/static/assets/voltar.png" alt="">
+    </a>
+
+    <img src="/static/assets/foto_1_usuario.png" alt="">
+    <h1>Simplifique sua rotina <br> e organize tudo em <br> um só lugar com <br> a gest&con!</h1>
+
+</body>
+    </html>
